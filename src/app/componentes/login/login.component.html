@@ -1,0 +1,31 @@
+<section class="container section">
+
+  <div class="row">
+    <form class="col s6" [formGroup]="formulario" >
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" formControlName="username" id="username">
+          <label for="username">Nombre Usuario</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="password" formControlName="password" id="password">
+          <label for="password">Contraseña</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <button class="btn blue" [disabled]="!formulario.valid" (click)="login()">
+            Iniciar Sesión..
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</section>
